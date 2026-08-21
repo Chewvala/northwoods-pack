@@ -1,0 +1,29 @@
+{
+  "name": "northwoods-pack",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Public PAI v0.1 modular monolith \u2014 5 capabilities in one Worker. First reference deployment in progress.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler d1 migrations apply DB --remote && wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260501.0",
+    "typescript": "^5.4.0",
+    "wrangler": "^4.0.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "DB": {
+        "description": "**Your memory.** Every identity field and every remembered thing lives here - in your account, deletable by you alone."
+      },
+      "PREFS": {
+        "description": "Small preferences store."
+      },
+      "AI": {
+        "description": "**The built-in voice.** Your harness talks using your own account's Workers AI allocation - no other AI product required."
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320">
+  <rect width="1280" height="320" fill="#1B3B2F"/>
+  <rect y="304" width="1280" height="16" fill="#C9A84C"/>
+  <!-- treeline -->
+  <g fill="#142E24">
+    <path d="M60 304 L110 200 L160 304 Z"/><path d="M130 304 L190 170 L250 304 Z"/><path d="M225 304 L270 215 L315 304 Z"/>
+    <path d="M1000 304 L1050 205 L1100 304 Z"/><path d="M1070 304 L1130 165 L1190 304 Z"/><path d="M1165 304 L1210 220 L1255 304 Z"/>
+  </g>
+  <g fill="#25503F">
+    <path d="M95 304 L150 185 L205 304 Z"/><path d="M1035 304 L1090 180 L1145 304 Z"/>
+  </g>
+  <text x="640" y="130" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="58" font-weight="700" fill="#F5E6C8">🌲 northwoods-pack</text>
+  <text x="640" y="185" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#F5F3EF">An AI that carries your load without charging you shame.</text>
+  <text x="640" y="240" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" fill="#A9B0A6">one button · your Cloudflare account · your database · nobody in between</text>
+</svg>

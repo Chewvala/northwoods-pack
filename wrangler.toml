@@ -1,0 +1,29 @@
+name = "northwoods-pack"
+main = "src/index.ts"
+compatibility_date = "2026-05-01"
+
+# Public PAI v0.2 — modular monolith
+# 5 capabilities (rhetoric / substrate / resume / fleet / mycelia) in 1 Worker.
+# Deploy to your own Cloudflare account: https://deploy.workers.cloudflare.com/?url=https://github.com/NorthwoodsSentinel/northwoods-pack
+
+[vars]
+# Change this BEFORE going to production. Generate a fresh token: openssl rand -hex 32
+
+# D1 — Cloudflare will create one for you on Deploy Button install. After deploy, run:
+#   wrangler d1 execute northwoods-substrate --remote --file=migrations/0001_init.sql
+[[d1_databases]]
+binding = "DB"
+database_name = "northwoods-substrate"
+
+# KV — Cloudflare creates on Deploy Button install.
+[[kv_namespaces]]
+binding = "PREFS"
+
+# Workers AI — no provisioning needed, binding is implicit per-account.
+[ai]
+binding = "AI"
+
+# Explicit so a redeploy can never dark this worker (T-265, 2026-08-18): Workers Logs on, full sampling.
+[observability]
+enabled = true
+head_sampling_rate = 1
